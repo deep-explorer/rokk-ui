@@ -43,14 +43,14 @@ export default function MenuInput({ field }: PropTypes): JSX.Element {
         value={month}
         sx={{
           borderRadius: "50px",
-          color: "#8f8f8f",
+          color: "white",
           minWidth: 60,
         }}
         className={classes.menu}
         inputProps={{
           style: {
             borderRadius: 50,
-            color: "#8f8f8f",
+            color: "white",
           },
         }}
         onChange={(e) => {
@@ -64,7 +64,7 @@ export default function MenuInput({ field }: PropTypes): JSX.Element {
               value={index + 1}
               style={{
                 backgroundColor: "#161616",
-                color: "#8f8f8f",
+                color: "white",
               }}>
               {val}
             </MenuItem>

@@ -32,8 +32,8 @@ const initUserData = {
   name: "",
   password: "",
   month: 1,
-  date: 0,
-  year: 0,
+  date: 1,
+  year: 1970,
   gender: "male",
   acceptTermsConditions: false,
 };
