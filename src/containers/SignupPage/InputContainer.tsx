@@ -303,7 +303,6 @@ export const InputContainer = () => {
           <div className="font-[400]">Have an account?</div>
           <div
             onClick={() => {
-              console.log(isAuthenticated);
               loginWithRedirect({
                 appState: {
                   returnTo: window.location.origin,
