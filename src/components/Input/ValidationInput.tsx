@@ -4,6 +4,7 @@ import BasicInput from "./BasicInput";
 export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   helperText?: string;
   error?: boolean;
+  innerRef: any;
 }
 
 export const ValidationInput = ({ helperText, error, ...props }: Props) => {

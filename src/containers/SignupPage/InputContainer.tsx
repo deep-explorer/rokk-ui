@@ -99,9 +99,10 @@ export const InputContainer = () => {
           <Controller
             name="email"
             control={control}
-            render={({ field }) => (
+            render={({ field: { ref, ...others } }) => (
               <ValidationInput
-                {...field}
+                {...others}
+                innerRef={ref}
                 placeholder="Your Email"
                 type="email"
                 error={!!errors.email}
@@ -112,9 +113,10 @@ export const InputContainer = () => {
           <Controller
             name="name"
             control={control}
-            render={({ field }) => (
+            render={({ field: { ref, ...others } }) => (
               <ValidationInput
-                {...field}
+                {...others}
+                innerRef={ref}
                 placeholder="Name"
                 type="name"
                 error={!!errors.name}
@@ -125,9 +127,10 @@ export const InputContainer = () => {
           <Controller
             name="password"
             control={control}
-            render={({ field }) => (
+            render={({ field: { ref, ...others } }) => (
               <ValidationInput
-                {...field}
+                {...others}
+                innerRef={ref}
                 placeholder="Create a Password"
                 type="password"
                 error={!!errors.password}
@@ -146,9 +149,10 @@ export const InputContainer = () => {
               <Controller
                 name="date"
                 control={control}
-                render={({ field }) => (
+                render={({ field: { ref, ...others } }) => (
                   <ValidationInput
-                    {...field}
+                    {...others}
+                    innerRef={ref}
                     name="date"
                     type="text"
                     placeholder="Date"
@@ -160,9 +164,10 @@ export const InputContainer = () => {
               <Controller
                 name="year"
                 control={control}
-                render={({ field }) => (
+                render={({ field: { ref, ...others } }) => (
                   <ValidationInput
-                    {...field}
+                    {...others}
+                    innerRef={ref}
                     name="year"
                     placeholder="Year"
                     error={!!errors.year}

@@ -7,6 +7,7 @@ export const FilterContainer = () => {
   return (
     <div className="flex flex-col gap-4 sm:gap-5">
       <BasicInput
+        innerRef={null}
         className="lg:mt-10 lg:mb-6"
         placeholder="Explore Bands, Artists..."
         type="search"

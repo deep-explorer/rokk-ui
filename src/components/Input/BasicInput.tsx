@@ -3,10 +3,11 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Search from "@mui/icons-material/Search";
 
-const BasicInput: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
-  children,
-  ...props
-}) => {
+export interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+  innerRef: any;
+}
+
+const BasicInput: React.FC<Props> = ({ children, innerRef, ...props }) => {
   const [isPasswordReveal, setPasswordReveal] = useState(false);
   const [isFocus, setFocus] = useState(false);
 
@@ -14,6 +15,7 @@ const BasicInput: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
     <div className="flex relative">
       <input
         {...props}
+        ref={innerRef}
         type={
           isPasswordReveal && props.type === "password" ? "text" : props.type
         }
